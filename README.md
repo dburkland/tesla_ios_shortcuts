@@ -6,7 +6,7 @@ After developing and using a [set of iOS shortcuts](https://github.com/dburkland
   * Slow shortcut execution times, sometimes 1-2 minutes to open the frunk for example
   * Lack of advanced logic in iOS shortcuts that made dealing with certain vehicle states both slow & problematic
 
-As a result I have developed a new set of iOS shortcuts along with a cloud-based API service. These shortcuts are much simpler as the logic for dealing with things like vehicle state are now handled by the Cloud API service. Shortcuts now take only seconds to run regardless of what state the vehicle is in or how slow your mobile device's network connection is (as long as it is available). The Cloud API service is something I created myself in Python and host as an Amazon Web Services (AWS) Lambda function.
+As a result I have developed a new set of iOS shortcuts along with a cloud-based API service. These shortcuts are much simpler as the logic for dealing with things like vehicle state are now handled by the Cloud API service. Shortcuts now take only seconds to run regardless of what state the vehicle is in or how slow your mobile device's network connection is (as long as it is available). The Cloud API service is something I created myself in Python and host as an Google Compute Platform (GCP) Cloud Function.
 
 In order to import the shortcuts you will first need to allow the import of untrusted shortcuts. This can be done by completing the steps documented [here](https://9to5mac.com/2019/08/14/allow-untrusted-shortcuts-ios-13/). You can then click on the link next to "Download Latest Tesla Shortcuts" to download & install the shortcut downloader. With the shortcut downloader installed please execute it via the Shortcuts app to downlad each of the shortcuts. Once each shortcut has been imported into the Shortcuts app on your device, you will then need to execute the "Generate Tesla Token" shortcut. This results in the creation of an authentication token that is used to communicate with your car. Once that is complete you can then execute any of the other Tesla shortcuts.
 
@@ -32,6 +32,9 @@ Tesla iOS Shortcut Inventory:
 
 * Turn On HVAC Max
   * Wakes the vehicle (if needed), turns on the HVAC system, sets the temperature to 82 degrees Fahrenheit, and turns on the driver's seat warmer
+
+* Turn On HVAC Max Spouse
+  * Wakes the vehicle (if needed), turns on the HVAC system, sets the temperature to 82 degrees Fahrenheit, and turns on both the driver's & front passenger's seat warmers
 
 * Turn Off HVAC
   * Wakes the vehicle (if needed) and turns off the HVAC system
