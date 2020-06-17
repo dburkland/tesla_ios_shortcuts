@@ -12,7 +12,7 @@ In order to import the shortcuts you will first need to allow the import of untr
 
 Tesla iOS Shortcut Inventory:
 
-* [Download Latest Tesla Shortcuts](https://www.icloud.com/shortcuts/e51877fb59d64a82912b6df1cdf280f1)
+* [Download Latest Tesla Shortcuts](https://www.icloud.com/shortcuts/159132835013422abc193e8a8124e625)
   * Allows you to download each of the published Tesla legacy shortcuts, right from the Shortcuts app.
   * NOTE: Anytime a new version of the Tesla legacy shortcuts is released 
 
