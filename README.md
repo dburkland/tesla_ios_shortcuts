@@ -62,7 +62,7 @@ In order to import the shortcuts, you will first need to allow the import of unt
   * Wakes the vehicle (if needed) and closes the windows
 
 * Set Charge Limit
-  * Wakes the vehicle (if needed) and sets the charge limit to the user-selected percentage.
+  * Wakes the vehicle (if needed) and sets the charge limit to the user-selected percentage
 
 * Open Charge Port Door
   * Wakes the vehicle (if needed) and opens the charge port door
@@ -81,6 +81,9 @@ In order to import the shortcuts, you will first need to allow the import of unt
 
 * Flash Lights
   * Wakes the vehicle (if needed) and flashes the lights
+
+* Start Remote Drive
+  * Wakes the vevhicle (if needed) and starts a remote driving session
   
 ### FAQs
 

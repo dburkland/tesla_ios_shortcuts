@@ -1,7 +1,7 @@
 {
-  "Version": "1.3",
+  "Version": "1.4",
   "Download Latest Tesla Shortcuts": "https://www.icloud.com/shortcuts/159132835013422abc193e8a8124e625",
-  "Generate Tesla Token": "https://www.icloud.com/shortcuts/7ba4fe91be4343cab6ec8164a6342cb6",
+  "Generate Tesla Token": "https://www.icloud.com/shortcuts/e49a1c068d8243abb98e5f878b8f6ef6",
   "Actuate Frunk": "https://www.icloud.com/shortcuts/34e78febc1024644bb82165e3bce3d2f",
   "Actuate Trunk": "https://www.icloud.com/shortcuts/c2f1d173d97342aca00c6804b6cb89c6",
   "Turn On HVAC Normal": "https://www.icloud.com/shortcuts/ec8bfa3db4b04c41893182538a255b8a",
@@ -20,5 +20,6 @@
   "Open Charge Port Door": "https://www.icloud.com/shortcuts/67d372beb0294ae9829ef14a364a75e5",
   "Close Charge Port Door": "https://www.icloud.com/shortcuts/c54f05d0e1ab41cebfd6a0f9adbc432b",
   "Honk Horn": "https://www.icloud.com/shortcuts/e7ee0f41ebf54ad68c5edefa78c65870",
-  "Flash Lights": "https://www.icloud.com/shortcuts/e82987fd9227402aa2f09ccc54433f05"
+  "Flash Lights": "https://www.icloud.com/shortcuts/e82987fd9227402aa2f09ccc54433f05",
+  "Start Remote Drive": "https://www.icloud.com/shortcuts/66c219b0eed24ec89c7238f5f654c949"
 }
