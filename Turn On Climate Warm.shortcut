@@ -211,6 +211,54 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>BE696D84-E2FB-4C46-B1AF-553DBD46B19E</string>
+				<key>WFDictionaryKey</key>
+				<string>temperature_unit</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>File</string>
+						<key>OutputUUID</key>
+						<string>921B5D88-359A-4D2B-B4D9-6E8431F88C74</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Dictionary Value</string>
+						<key>OutputUUID</key>
+						<string>BE696D84-E2FB-4C46-B1AF-553DBD46B19E</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>temperature_unit</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -274,7 +322,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_temp</string>
+				<string>parameter_1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -308,7 +356,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_charge_limit</string>
+				<string>parameter_2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -487,7 +535,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_TEMP</string>
+										<string>PARAMETER_1</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -503,7 +551,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_temp</string>
+												<string>parameter_1</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -523,7 +571,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_CHARGE_LIMIT</string>
+										<string>PARAMETER_2</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -539,7 +587,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_charge_limit</string>
+												<string>parameter_2</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -683,6 +731,252 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>4E5AF097-5DF7-4B6F-A5B4-4CA979748D05</string>
+				<key>WFCondition</key>
+				<integer>4</integer>
+				<key>WFConditionalActionString</key>
+				<string>Celsius</string>
+				<key>WFControlFlowMode</key>
+				<integer>0</integer>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>Aggrandizements</key>
+							<array>
+								<dict>
+									<key>PropertyName</key>
+									<string>Name</string>
+									<key>PropertyUserInfo</key>
+									<string>WFItemName</string>
+									<key>Type</key>
+									<string>WFPropertyVariableAggrandizement</string>
+								</dict>
+							</array>
+							<key>Type</key>
+							<string>Variable</string>
+							<key>VariableName</key>
+							<string>temperature_unit</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>92000B87-F060-4494-873F-A972370A4B47</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>parameter_1</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼degrees Celsius</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>92000B87-F060-4494-873F-A972370A4B47</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>display_vehicle_temp</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>4E5AF097-5DF7-4B6F-A5B4-4CA979748D05</string>
+				<key>WFControlFlowMode</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.math</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>C28F3F00-3A0F-499E-83CD-5DB73FE6B622</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>Type</key>
+						<string>Variable</string>
+						<key>VariableName</key>
+						<string>parameter_1</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFMathOperand</key>
+				<string>1.8</string>
+				<key>WFMathOperation</key>
+				<string>×</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.math</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>33E72CDD-9D24-428B-9328-AE43FF71A844</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Calculation Result</string>
+						<key>OutputUUID</key>
+						<string>C28F3F00-3A0F-499E-83CD-5DB73FE6B622</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFMathOperand</key>
+				<string>32</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.round</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>2B88F01F-8E13-4B1E-9724-A794CE9EAF8A</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Calculation Result</string>
+						<key>OutputUUID</key>
+						<string>33E72CDD-9D24-428B-9328-AE43FF71A844</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>DC90B797-C2FA-4869-B71A-05B47EFEFAA5</string>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>OutputName</key>
+								<string>Rounded Number</string>
+								<key>OutputUUID</key>
+								<string>2B88F01F-8E13-4B1E-9724-A794CE9EAF8A</string>
+								<key>Type</key>
+								<string>ActionOutput</string>
+							</dict>
+						</dict>
+						<key>string</key>
+						<string>￼ degrees Fahrenheit</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>DC90B797-C2FA-4869-B71A-05B47EFEFAA5</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>display_vehicle_temp</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>4E5AF097-5DF7-4B6F-A5B4-4CA979748D05</string>
+				<key>UUID</key>
+				<string>BFFF7092-B928-47C0-B59C-05692B7098FF</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.showresult</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -704,11 +998,11 @@
 								<key>Type</key>
 								<string>Variable</string>
 								<key>VariableName</key>
-								<string>vehicle_temp</string>
+								<string>display_vehicle_temp</string>
 							</dict>
 						</dict>
 						<key>string</key>
-						<string>I have turned on ￼'s Climate Control system and set the temperature to ￼ degrees Celsius.</string>
+						<string>I have turned on ￼'s Climate Control system and set the temperature to ￼.</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>
@@ -756,7 +1050,7 @@
 		<key>WFWorkflowIconGlyphNumber</key>
 		<integer>59842</integer>
 		<key>WFWorkflowIconStartColor</key>
-		<integer>4282601983</integer>
+		<integer>-12365313</integer>
 	</dict>
 	<key>WFWorkflowImportQuestions</key>
 	<array/>

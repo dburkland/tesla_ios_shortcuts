@@ -322,6 +322,54 @@
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>UUID</key>
+				<string>AD4BE16F-9F84-4F55-9F8B-2ACD21C7D640</string>
+				<key>WFDictionaryKey</key>
+				<string>temperature_unit</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Dictionary</string>
+						<key>OutputUUID</key>
+						<string>DC2B7547-4932-4B37-8FEC-9ADDE547085F</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Dictionary Value</string>
+						<key>OutputUUID</key>
+						<string>AD4BE16F-9F84-4F55-9F8B-2ACD21C7D640</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>temperature_unit</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.getvalueforkey</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
 				<string>24BBA6D6-E6A8-4EDE-80F4-66D10D1B3E0E</string>
 				<key>WFDictionaryKey</key>
 				<string>refresh_token</string>
@@ -591,6 +639,68 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.list</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>A7B5C413-F361-4A10-B740-B639069195E8</string>
+				<key>WFItems</key>
+				<array>
+					<string>Celsius</string>
+					<string>Fahrenheit</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.choosefromlist</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>B3AA0460-0E52-4FE4-A98D-BC46E5A46BF0</string>
+				<key>WFChooseFromListActionPrompt</key>
+				<string>Preferred Temperature Unit</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>List</string>
+						<key>OutputUUID</key>
+						<string>A7B5C413-F361-4A10-B740-B639069195E8</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Chosen Item</string>
+						<key>OutputUUID</key>
+						<string>B3AA0460-0E52-4FE4-A98D-BC46E5A46BF0</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>temperature_unit</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -739,7 +849,7 @@
 			<key>WFWorkflowActionParameters</key>
 			<dict>
 				<key>ShowHeaders</key>
-				<true/>
+				<false/>
 				<key>UUID</key>
 				<string>FA93FC00-217D-4C74-B5B1-E23D7EDD72DC</string>
 				<key>WFHTTPHeaders</key>
@@ -984,7 +1094,7 @@
 				<key>UUID</key>
 				<string>6BD8727B-8D9C-42F7-9DE7-4F5874A915D3</string>
 				<key>WFTextActionText</key>
-				<string>https://us-central1-prod-cloud-functions-276805.cloudfunctions.net/tesla_cmds_frontend_gcp_cloud_function</string>
+				<string>https://kx6y5ro3w9.execute-api.us-west-1.amazonaws.com/prod</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1356,6 +1466,42 @@
 												<string>Variable</string>
 												<key>VariableName</key>
 												<string>tesla_password</string>
+											</dict>
+										</dict>
+										<key>string</key>
+										<string>￼</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+							</dict>
+							<dict>
+								<key>WFItemType</key>
+								<integer>0</integer>
+								<key>WFKey</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>attachmentsByRange</key>
+										<dict/>
+										<key>string</key>
+										<string>temperature_unit</string>
+									</dict>
+									<key>WFSerializationType</key>
+									<string>WFTextTokenString</string>
+								</dict>
+								<key>WFValue</key>
+								<dict>
+									<key>Value</key>
+									<dict>
+										<key>attachmentsByRange</key>
+										<dict>
+											<key>{0, 1}</key>
+											<dict>
+												<key>Type</key>
+												<string>Variable</string>
+												<key>VariableName</key>
+												<string>temperature_unit</string>
 											</dict>
 										</dict>
 										<key>string</key>

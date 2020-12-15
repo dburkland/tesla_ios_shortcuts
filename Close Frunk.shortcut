@@ -30,7 +30,7 @@
 		<key>WFWorkflowIconGlyphNumber</key>
 		<integer>59654</integer>
 		<key>WFWorkflowIconStartColor</key>
-		<integer>4282601983</integer>
+		<integer>-12365313</integer>
 	</dict>
 	<key>WFWorkflowImportQuestions</key>
 	<array/>
@@ -59,6 +59,8 @@
 	<key>WFWorkflowMinimumClientVersionString</key>
 	<string>900</string>
 	<key>WFWorkflowTypes</key>
-	<array/>
+	<array>
+		<string>Watch</string>
+	</array>
 </dict>
 </plist>

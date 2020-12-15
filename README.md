@@ -8,7 +8,7 @@ After developing and using a [set of iOS shortcuts](https://github.com/dburkland
   * Slow shortcut execution times, sometimes 1-2 minutes to open the frunk for example
   * Lack of advanced logic in iOS shortcuts that made dealing with certain vehicle states both slow & problematic
 
-As a result, I have developed a new set of iOS shortcuts along with a cloud-based API service. These shortcuts are much simpler as the logic for dealing with things like vehicle state are now handled by the Cloud API service. Shortcuts now take only seconds to run regardless of what state the vehicle is in or how slow your mobile device's network connection is (as long as it is available). The Cloud API service is something I created myself in Python and host as a Google Compute Platform (GCP) Cloud Function.
+As a result, I have developed a new set of iOS shortcuts along with a cloud-based API service. These shortcuts are much simpler as the logic for dealing with things like vehicle state are now handled by the Cloud API service. Shortcuts now take only seconds to run regardless of what state the vehicle is in or how slow your mobile device's network connection is (as long as it is available). The Cloud API service is something I created myself in Python and host as a set of Amazon Web Services (AWS) Lambda Functions.
 
 ### Setup
 
@@ -16,7 +16,7 @@ In order to import the shortcuts, you will first need to allow the import of unt
 
 ### Tesla iOS Shortcut Inventory
 
-* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/e31f8236300741c69597eac9f377e022)
+* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/b6276635a8de482f8c0cd7674de3b8a0)
   * Allows you to download each of the published Tesla shortcuts, right from the Shortcuts app
 
 * Tesla iOS Shortcuts Update Checker
@@ -42,16 +42,16 @@ In order to import the shortcuts, you will first need to allow the import of unt
   * Wakes the vehicle (if needed) and closes the trunk
 
 * Turn On Climate Cool
-  * Wakes the vehicle (if needed), turns on the Climate Control system, and sets the temperature to 66 degrees Fahrenheit
+  * Wakes the vehicle (if needed), turns on the Climate Control system, and sets the temperature to 66 degrees Fahrenheit (19 degrees Celsius)
 
 * Turn On Climate Warm
-  * Wakes the vehicle (if needed), turns on the Climate Control system, and sets the temperature to 73 degrees Fahrenheit
+  * Wakes the vehicle (if needed), turns on the Climate Control system, and sets the temperature to 73 degrees Fahrenheit (23 degrees Celsius)
 
 * Turn On Climate Heat
-  * Wakes the vehicle (if needed), turns on the Climate Control system, sets the temperature to 82 degrees Fahrenheit (HI), and turns on the driver's seat warmer
+  * Wakes the vehicle (if needed), turns on the Climate Control system, sets the temperature to High, and turns on the driver's seat warmer
 
 * Turn On Climate Heat Passenger
-  * Wakes the vehicle (if needed), turns on the Climate Control system, sets the temperature to 82 degrees Fahrenheit (HI), and turns on both the driver's & front passenger's seat warmers
+  * Wakes the vehicle (if needed), turns on the Climate Control system, sets the temperature to High, and turns on both the driver's & front passenger's seat warmers
 
 * Turn Off Climate
   * Wakes the vehicle (if needed) and turns off the Climate Control system

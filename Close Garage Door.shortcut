@@ -59,6 +59,8 @@
 	<key>WFWorkflowMinimumClientVersionString</key>
 	<string>900</string>
 	<key>WFWorkflowTypes</key>
-	<array/>
+	<array>
+		<string>Watch</string>
+	</array>
 </dict>
 </plist>

@@ -67,33 +67,6 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.showresult</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>Text</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>attachmentsByRange</key>
-						<dict>
-							<key>{0, 1}</key>
-							<dict>
-								<key>Type</key>
-								<string>Variable</string>
-								<key>VariableName</key>
-								<string>access_token</string>
-							</dict>
-						</dict>
-						<key>string</key>
-						<string>￼</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenString</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.getvalueforkey</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -301,7 +274,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_temp</string>
+				<string>parameter_1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -335,7 +308,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_charge_limit</string>
+				<string>parameter_2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -514,7 +487,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_TEMP</string>
+										<string>PARAMETER_1</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -530,7 +503,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_temp</string>
+												<string>parameter_1</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -550,7 +523,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_CHARGE_LIMIT</string>
+										<string>PARAMETER_2</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -566,7 +539,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_charge_limit</string>
+												<string>parameter_2</string>
 											</dict>
 										</dict>
 										<key>string</key>

@@ -211,54 +211,6 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.getvalueforkey</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>326B09EA-BE4A-4B8F-B3F7-E57BFD368A27</string>
-				<key>WFDictionaryKey</key>
-				<string>tesla_password</string>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>File</string>
-						<key>OutputUUID</key>
-						<string>921B5D88-359A-4D2B-B4D9-6E8431F88C74</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.setvariable</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Dictionary Value</string>
-						<key>OutputUUID</key>
-						<string>326B09EA-BE4A-4B8F-B3F7-E57BFD368A27</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-				<key>WFVariableName</key>
-				<string>tesla_password</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.gettext</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -322,7 +274,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_temp</string>
+				<string>parameter_1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -356,7 +308,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>vehicle_charge_limit</string>
+				<string>parameter_2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -535,7 +487,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_TEMP</string>
+										<string>PARAMETER_1</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -551,7 +503,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_temp</string>
+												<string>parameter_1</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -571,7 +523,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_CHARGE_LIMIT</string>
+										<string>PARAMETER_2</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -587,43 +539,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_charge_limit</string>
-											</dict>
-										</dict>
-										<key>string</key>
-										<string>￼</string>
-									</dict>
-									<key>WFSerializationType</key>
-									<string>WFTextTokenString</string>
-								</dict>
-							</dict>
-							<dict>
-								<key>WFItemType</key>
-								<integer>0</integer>
-								<key>WFKey</key>
-								<dict>
-									<key>Value</key>
-									<dict>
-										<key>attachmentsByRange</key>
-										<dict/>
-										<key>string</key>
-										<string>PASSWORD</string>
-									</dict>
-									<key>WFSerializationType</key>
-									<string>WFTextTokenString</string>
-								</dict>
-								<key>WFValue</key>
-								<dict>
-									<key>Value</key>
-									<dict>
-										<key>attachmentsByRange</key>
-										<dict>
-											<key>{0, 1}</key>
-											<dict>
-												<key>Type</key>
-												<string>Variable</string>
-												<key>VariableName</key>
-												<string>tesla_password</string>
+												<string>parameter_2</string>
 											</dict>
 										</dict>
 										<key>string</key>

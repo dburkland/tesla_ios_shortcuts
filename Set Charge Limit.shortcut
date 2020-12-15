@@ -245,40 +245,6 @@
 		</dict>
 		<dict>
 			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.gettext</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>UUID</key>
-				<string>F24A18C0-737E-4FEA-AE8E-7CE8FBBC8340</string>
-				<key>WFTextActionText</key>
-				<string></string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
-			<string>is.workflow.actions.setvariable</string>
-			<key>WFWorkflowActionParameters</key>
-			<dict>
-				<key>WFInput</key>
-				<dict>
-					<key>Value</key>
-					<dict>
-						<key>OutputName</key>
-						<string>Text</string>
-						<key>OutputUUID</key>
-						<string>F24A18C0-737E-4FEA-AE8E-7CE8FBBC8340</string>
-						<key>Type</key>
-						<string>ActionOutput</string>
-					</dict>
-					<key>WFSerializationType</key>
-					<string>WFTextTokenAttachment</string>
-				</dict>
-				<key>WFVariableName</key>
-				<string>vehicle_temp</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>WFWorkflowActionIdentifier</key>
 			<string>is.workflow.actions.list</string>
 			<key>WFWorkflowActionParameters</key>
 			<dict>
@@ -390,7 +356,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>charge_limit</string>
+				<string>parameter_1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -424,7 +390,7 @@
 					<string>WFTextTokenAttachment</string>
 				</dict>
 				<key>WFVariableName</key>
-				<string>charge_limit</string>
+				<string>parameter_1</string>
 			</dict>
 		</dict>
 		<dict>
@@ -438,6 +404,38 @@
 				<string>F5AD36D2-8DE4-4A72-B16E-6A5A7BB5BB6F</string>
 				<key>WFControlFlowMode</key>
 				<integer>2</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>UUID</key>
+				<string>EBED1436-B5C0-466C-AAB3-5BE3AAB7C314</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.setvariable</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInput</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>OutputName</key>
+						<string>Text</string>
+						<key>OutputUUID</key>
+						<string>EBED1436-B5C0-466C-AAB3-5BE3AAB7C314</string>
+						<key>Type</key>
+						<string>ActionOutput</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFVariableName</key>
+				<string>parameter_2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -616,7 +614,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_TEMP</string>
+										<string>PARAMETER_1</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -632,7 +630,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>vehicle_temp</string>
+												<string>parameter_1</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -652,7 +650,7 @@
 										<key>attachmentsByRange</key>
 										<dict/>
 										<key>string</key>
-										<string>VEHICLE_CHARGE_LIMIT</string>
+										<string>PARAMETER_2</string>
 									</dict>
 									<key>WFSerializationType</key>
 									<string>WFTextTokenString</string>
@@ -668,7 +666,7 @@
 												<key>Type</key>
 												<string>Variable</string>
 												<key>VariableName</key>
-												<string>charge_limit</string>
+												<string>parameter_2</string>
 											</dict>
 										</dict>
 										<key>string</key>
@@ -833,7 +831,7 @@
 								<key>Type</key>
 								<string>Variable</string>
 								<key>VariableName</key>
-								<string>charge_limit</string>
+								<string>parameter_1</string>
 							</dict>
 						</dict>
 						<key>string</key>
@@ -885,7 +883,7 @@
 		<key>WFWorkflowIconGlyphNumber</key>
 		<integer>59764</integer>
 		<key>WFWorkflowIconStartColor</key>
-		<integer>4282601983</integer>
+		<integer>-12365313</integer>
 	</dict>
 	<key>WFWorkflowImportQuestions</key>
 	<array/>
