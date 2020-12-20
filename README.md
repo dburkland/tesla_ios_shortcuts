@@ -25,8 +25,15 @@ In order to import the shortcuts, you will first need to allow the import of unt
   * RECOMMENDATION: It is recommended to run this shortcut once a month to ensure that you have the latest version of Tesla iOS Shortcuts installed
 
 * Create Tesla Token
-  * Creates an authorization token from the captured Tesla.com credentials
-  * NOTE: This shortcut needs to be executed at least every 45 days since the tokens automatically expire
+  * Creates an authentication token from the captured Tesla.com credentials
+  * IMPORTANT NOTES:
+    * This shortcut needs to be executed at least every 45 days since the tokens automatically expire
+    * With the introduction of support for Multi-Factor Authentication (MFA), Tesla made several changes to their backend systems & how authentication tokens are handled. If you have MFA enabled on your Tesla.com account and also leverage 3rd party Tesla apps, I strongly recommend that you create a second Tesla.com account & grant it access to your vehicle(s). You will then use the second Tesla.com for ONLY iOS shortcuts and nothing else (including Tesla.com or the official Tesla app). For instructions on how to create a second account and grant it access to your vehicle(s), please see the following [article](https://support.teslafi.com/en/knowledge-bases/2/articles/15692-creating-a-separate-teslacom-account-for-teslafi).
+    * After following the aforementioned support article, you will then need to do the following:
+      * Open the "Files" app
+      * Browse to "Shortcuts" -> "ios_shortcuts" -> "tesla"
+      * Delete the "config.json" file.
+      * Re-run the "Create Tesla Token" shortcut.
   * RECOMMENDATION: As long as you are on iOS 14 or greater, I would recommend you setup an automation within the shortcuts app to run this shortcut every month since the Tesla.com tokens expire after 45 days. For instructions on how to setup a monthly automation, please see the FAQs section below.
 
 * Open Frunk
@@ -130,7 +137,7 @@ In order to import the shortcuts, you will first need to allow the import of unt
   * Once the shortcut is named appropriately, simply say "Hey Siri <Name of Shortcut>".
   * NOTE: Please keep in mind that the shortcut name must be unique from other shortcuts in your library. As an example, I tried to rename **Turn on HVAC Normal** to **Turn on Heat**, but that command is associated with HomeKit so it doesn't work. **Turn Heat On** however works perfectly fine.
 * How secure are these shortcuts?
-  * The authentication token that is created by the "Create Tesla Token" shortcut is stored in your personal Reminders App. The authentication token is only visible to apps or services that have access to your Reminders App meaning folks cannot publicly access this data by default. 
+  * The authentication token that is created by the "Create Tesla Token" shortcut is stored in your personal iCloud Drive. The authentication token is only visible to apps or services that have access to your iCloud Drive meaning folks cannot publicly access this data by default. 
   * When a shortcut is executed, the authentication token is sent to the Cloud API service using TLS where it is then used to communicate with Tesla. The authentication token is never logged or recorded in any way, shape or form.
   * NOTE: I do NOT log or record any usage data, nor do I log or record any of the created Tesla API tokens.
 * How do I automatically run the "Create Tesla Token" shortcut every month before my Tesla.com token expires?
@@ -158,9 +165,4 @@ In order to import the shortcuts, you will first need to allow the import of unt
     * When you see a "Don't ask before running?" pop up message, make sure to select "Don't Ask" to confirm your selection.
     * ![](https://www.dropbox.com/s/0ql882kkbc408d4/IMG_0805.PNG?raw=1)
   * Tap "Done" to create your new automation.
-  * NOTE: When the automation runs each month please note that it will ask for your interaction by popping up a message like the one seen in the image below:
-    * ![](https://www.dropbox.com/s/0s2fudbf1tujfsg/IMG_0811.PNG?raw=1)
-    * When you see this message, tap on the "Remove 1 Reminder?" pop-up.
-    * Once you have tapped on the aforementioned pop-up you should then see a follow up message that asks, "Are you sure you want to remove this item?". Please select "Remove" which will delete the old Tesla.com token.
-    * ![](https://www.dropbox.com/s/6qeokmucdwt142a/IMG_0812.PNG?raw=1)
-    * The shortcut will then finish executing and result in the creation of a fresh Tesla.com token that will be valid for another month.
+  * The shortcut will then finish executing and result in the creation of a fresh Tesla.com token that will be valid for another month.
