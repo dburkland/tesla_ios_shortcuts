@@ -364,7 +364,7 @@
 				<key>WFAskActionPrompt</key>
 				<string>Tesla MFA Code (if applicable)</string>
 				<key>WFInputType</key>
-				<string>Number</string>
+				<string>Text</string>
 			</dict>
 		</dict>
 		<dict>
