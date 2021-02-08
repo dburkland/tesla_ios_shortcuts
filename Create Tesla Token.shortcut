@@ -1075,7 +1075,7 @@
 				<key>UUID</key>
 				<string>4B3C048B-7595-4708-83D8-FE97166F7361</string>
 				<key>WFDictionaryKey</key>
-				<string>id</string>
+				<string>id_s</string>
 				<key>WFInput</key>
 				<dict>
 					<key>Value</key>
