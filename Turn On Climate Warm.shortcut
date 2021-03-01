@@ -794,7 +794,7 @@
 							</dict>
 						</dict>
 						<key>string</key>
-						<string>￼degrees Celsius</string>
+						<string>￼ degrees Celsius</string>
 					</dict>
 					<key>WFSerializationType</key>
 					<string>WFTextTokenString</string>

@@ -12,11 +12,23 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
 
 ### Setup
 
-In order to import the shortcuts, you will first need to allow the import of untrusted shortcuts. This can be done by completing the steps documented [here](https://9to5mac.com/2019/08/14/allow-untrusted-shortcuts-ios-13/). When ready, you can then tap on the link next to "Tesla iOS Shortcuts Downloader" to download & install the shortcut downloader. With the shortcut downloader now installed, please execute it via the Shortcuts app to download each of the shortcuts in the list below. Keep running the shortcut until it prompts you that it has installed all of the available Tesla iOS Shortcuts. Once each shortcut has been imported into the Shortcuts app, you will then need to execute the "Create Tesla Token" shortcut. This results in the creation of an authentication token that is used to communicate with your vehicle. Once that is complete, you can then execute any of the other Tesla shortcuts as you wish.
+* Prerequisites
+  * To begin you will first need to download & install the [Auth app for Tesla](https://apps.apple.com/us/app/auth-app-for-tesla/id1552058613#?platform=iphone).
+  * With the Auth app for Tesla now downloaded & installed, please open it. You should now see something like this:
+    * ![](https://www.dropbox.com/s/ijlogo69dsywf22/IMG_2453.jpeg?raw=1)
+  * Next you will need to tap on "Login with Tesla" and follow the prompts to sign into your Tesla.com account.
+    * ![](https://www.dropbox.com/s/9j6cgxwy6i4twf8/IMG_2454.jpeg?raw=1)
+  * If everything worked you should see something like this:
+    * ![](https://www.dropbox.com/s/k1ru5y6oeanbns8/IMG_2455.jpeg?raw=1)
+* Shortcut Setup
+  * In order to import the shortcuts, you will first need to allow the import of untrusted shortcuts. This can be done by completing the steps documented [here](https://9to5mac.com/2019/08/14/allow-untrusted-shortcuts-ios-13/). 
+  * When ready, you can then tap on the link next to "Tesla iOS Shortcuts Downloader" to download & install the shortcut downloader.
+  * With the shortcut downloader now installed, please execute it via the Shortcuts app to download each of the shortcuts in the list below. Keep running the shortcut until it prompts you that it has installed all of the available Tesla iOS Shortcuts.
+  * Once each shortcut has been imported into the Shortcuts app, you will then need to execute the "Create Tesla Token" shortcut. This results in the creation of an authentication token that is used to communicate with your vehicle. Once that is complete, you can then execute any of the other Tesla shortcuts as you wish.
 
 ### Tesla iOS Shortcut Inventory
 
-* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/b6276635a8de482f8c0cd7674de3b8a0)
+* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/d3724ba6697c400dbb587f2df7049df5)
   * Allows you to download each of the published Tesla shortcuts, right from the Shortcuts app.
 
 * Tesla iOS Shortcuts Update Checker
@@ -118,7 +130,7 @@ In order to import the shortcuts, you will first need to allow the import of unt
 * What can you do if you receive error messages like the one below?
   * ![](https://pbs.twimg.com/media/EHQXnncXYAEvPbZ?format=jpg&name=medium)
   * First, I would recommend that you generate a fresh authentication token by executing the "Create Tesla Token" shortcut.
-  * If that fails to resolve the issue I would then delete the "Create Tesla Token" shortcut, reinstall it, and then execute it again.
+  * If that fails to resolve the issue, I would then try to Open the Auth app for Tesla, re-login into your Tesla.com account, delete the "Create Tesla Token" shortcut, reinstall it, and then execute it again.
   * If you are still running into issues, I would then recommend verifying that:
     * Your Tesla.com account is not locked (try logging into it via https://tesla.com).
     * You are specifying your email address with the same case that matches how it exists in your Tesla.com account (the new API appears to be case sensitive).
@@ -132,4 +144,3 @@ In order to import the shortcuts, you will first need to allow the import of unt
   * The authentication token that is created by the "Create Tesla Token" shortcut is stored in your personal iCloud Drive. The authentication token is only visible to apps or services that have access to your iCloud Drive meaning folks cannot publicly access this data by default. 
   * When a shortcut is executed, the authentication token is sent to the Cloud API service using TLS where it is then used to communicate with Tesla. The authentication token is never logged or recorded in any way, shape or form.
   * NOTE: I do NOT log or record any usage data, nor do I log or record any of the created Tesla API tokens.
-
