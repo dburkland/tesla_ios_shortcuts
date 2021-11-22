@@ -24,11 +24,11 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
   * In order to import the shortcuts, you will first need to allow the import of untrusted shortcuts. This can be done by completing the steps documented [here](https://9to5mac.com/2019/08/14/allow-untrusted-shortcuts-ios-13/). 
   * When ready, you can then tap on the link next to "Tesla iOS Shortcuts Downloader" to download & install the shortcut downloader.
   * With the shortcut downloader now installed, please execute it via the Shortcuts app to download each of the shortcuts in the list below. Keep running the shortcut until it prompts you that it has installed all of the available Tesla iOS Shortcuts.
-  * Once each shortcut has been imported into the Shortcuts app, you will then need to execute the "Create Tesla Token" shortcut. This results in the creation of an authentication token that is used to communicate with your vehicle. Once that is complete, you can then execute any of the other Tesla shortcuts as you wish.
+  * Once each shortcut has been imported into the Shortcuts app, you will then need to execute the "Create Tesla Token" shortcut. This results in the creation of the appropriate iCloud Drive directory structure & configuration file. Once that is complete, you can then execute any of the other Tesla shortcuts as you wish.
 
 ### Tesla iOS Shortcut Inventory
 
-* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/d3724ba6697c400dbb587f2df7049df5)
+* [Tesla iOS Shortcuts Downloader](https://www.icloud.com/shortcuts/57df985951204a608f020d6040dd63b6)
   * Allows you to download each of the published Tesla shortcuts, right from the Shortcuts app.
 
 * Tesla iOS Shortcuts Update Checker
@@ -37,14 +37,12 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
   * RECOMMENDATION: It is recommended to run this shortcut once a month to ensure that you have the latest version of Tesla iOS Shortcuts installed
 
 * Create Tesla Token
-  * Creates an authentication token from the captured Tesla.com credentials using Tesla's new v3 authentication endpoint.
+  * Creates the appropriate iCloud Drive directory structure & configuration file that will be used by each of the Tesla iOS Shortcuts. Thanks to the Auth app for Tesla, authentication tokens are automatically created & refreshed. If you are not planning on using the "Start Remote Drive" shortcut you do not need to enter your password when prompted by the "Create Tesla Token" shortcut.
   * IMPORTANT NOTES:
-    * This shortcut needs to be executed at least every 45 days since the tokens automatically expire.
     * If you run into any issues while executing the "Create Tesla Token" shortcut please refer to the FAQs section below.
-  * RECOMMENDATION: I would recommend setting a reminder to re-run this shortcut every month to ensure you always have a valid authentication token.
 
-* Open Frunk
-  * Wakes the vehicle (if needed) and opens the frunk.
+* Open Front Trunk
+  * Wakes the vehicle (if needed) and opens the front trunk.
 
 * Close Frunk
   * Wakes the vehicle (if needed) and closes the frunk.
@@ -103,6 +101,15 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
 * Stop Charging
   * Wakes the vehicle (if needed) and stops charging.
 
+* Set Charging Amps
+  * Wakes the vehicle (if needed) and sets the charging amps to the user-selected value.
+
+* Enable Scheduled Charging
+  * Wakes the vehicle (if needed), turns on scheduled charging, and sets the scheduled charging time to the user-selected value. 
+
+* Disable Scheduled Charging
+  * Wakes the vehicle (if needed) and turns off scheduled charging.
+
 * Honk Horn
   * Wakes the vehicle (if needed) and honks the horn.
 
@@ -129,8 +136,7 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
 
 * What can you do if you receive error messages like the one below?
   * ![](https://pbs.twimg.com/media/EHQXnncXYAEvPbZ?format=jpg&name=medium)
-  * First, I would recommend that you generate a fresh authentication token by executing the "Create Tesla Token" shortcut.
-  * If that fails to resolve the issue, I would then try to Open the Auth app for Tesla, re-login into your Tesla.com account, delete the "Create Tesla Token" shortcut, reinstall it, and then execute it again.
+  * Try to open the Auth app for Tesla, re-login into your Tesla.com account, delete the "Create Tesla Token" shortcut, reinstall it, and then execute it again.
   * If you are still running into issues, I would then recommend verifying that:
     * Your Tesla.com account is not locked (try logging into it via https://tesla.com).
     * You are specifying your email address with the same case that matches how it exists in your Tesla.com account (the new API appears to be case sensitive).
@@ -141,6 +147,6 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
   * Once the shortcut is named appropriately, simply say "Hey Siri <Name of Shortcut>".
   * NOTE: Please keep in mind that the shortcut name must be unique from other shortcuts in your library. As an example, I tried to rename **Turn on HVAC Normal** to **Turn on Heat**, but that command is associated with HomeKit so it doesn't work. **Turn Heat On** however works perfectly fine.
 * How secure are these shortcuts?
-  * The authentication token that is created by the "Create Tesla Token" shortcut is stored in your personal iCloud Drive. The authentication token is only visible to apps or services that have access to your iCloud Drive meaning folks cannot publicly access this data by default. 
+  * The authentication and refresh tokens created by the Auth app for Tesla are securely stored in your personal iCloud account. The tokens are only visible to apps or services that have access to your iCloud account meaning folks cannot publicly access this data by default. 
   * When a shortcut is executed, the authentication token is sent to the Cloud API service using TLS where it is then used to communicate with Tesla. The authentication token is never logged or recorded in any way, shape or form.
   * NOTE: I do NOT log or record any usage data, nor do I log or record any of the created Tesla API tokens.
