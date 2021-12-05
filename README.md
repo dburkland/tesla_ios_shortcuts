@@ -21,7 +21,7 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
   * If everything worked you should see something like this:
     * ![](https://www.dropbox.com/s/k1ru5y6oeanbns8/IMG_2455.jpeg?raw=1)
 * Shortcut Setup
-  * In order to import the shortcuts, you will first need to allow the import of untrusted shortcuts. This can be done by completing the steps documented [here](https://9to5mac.com/2019/08/14/allow-untrusted-shortcuts-ios-13/). 
+  * In order to import the shortcuts, you will first need to allow the import of untrusted shortcuts. This can be done by toggling the "Private Sharing" setting on & off again using the steps documented [here](https://support.apple.com/guide/shortcuts/adjust-privacy-settings-apd961a4fc65/ios) under "Allow private sharing of shortcuts on iPhone or iPad".
   * When ready, you can then tap on the link next to "Tesla iOS Shortcuts Downloader" to download & install the shortcut downloader.
   * With the shortcut downloader now installed, please execute it via the Shortcuts app to download each of the shortcuts in the list below. Keep running the shortcut until it prompts you that it has installed all of the available Tesla iOS Shortcuts.
   * Once each shortcut has been imported into the Shortcuts app, you will then need to execute the "Create Tesla Token" shortcut. This results in the creation of the appropriate iCloud Drive directory structure & configuration file. Once that is complete, you can then execute any of the other Tesla shortcuts as you wish.
@@ -44,8 +44,8 @@ As a result, I have developed a new set of iOS shortcuts along with a cloud-base
 * Open Front Trunk
   * Wakes the vehicle (if needed) and opens the front trunk.
 
-* Close Frunk
-  * Wakes the vehicle (if needed) and closes the frunk.
+* Close Front Trunk
+  * Wakes the vehicle (if needed) and closes the front trunk.
 
 * Open Trunk
   * Wakes the vehicle (if needed) and opens the trunk.
