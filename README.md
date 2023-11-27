@@ -1,7 +1,7 @@
 README
 =========
 
-### UPDATE as of 2023-11-26: With Tesla now releasing native support for iOS Shortcuts, my shortcuts are now considered deprecated and EOL.
+### UPDATE as of 2023-11-26: With Tesla now offering native support for iOS Shortcuts, my shortcuts are considered deprecated and have reached end-of-life (EOL).
 
 ### Introduction
 
