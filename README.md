@@ -1,6 +1,8 @@
 README
 =========
 
+### UPDATE as of 2023-11-26: With Tesla now releasing native support for iOS Shortcuts, my shortcuts are now considered deprecated and EOL.
+
 ### Introduction
 
 After developing and using a [set of iOS shortcuts](https://github.com/dburkland/tesla_legacy_ios_shortcuts) for various Tesla-related functions I ran into a few issues:
